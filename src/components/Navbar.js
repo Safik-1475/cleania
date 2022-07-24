@@ -7,7 +7,7 @@ const Navbar = ({ children }) => {
             <div class="drawer drawer-end">
                 <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content flex flex-col">
-                    <div class="w-full navbar bg-base-100 lg:px-16 sm:px-10">
+                    <div class="w-full navbar bg-base-100 lg:px-16 sm:px-10 fixed top z-50">
                         <NavLink to={'/'}>
                             <img className='w-1/6' src="https://i.ibb.co/ZgyFj5s/logo.png" alt="logo" />
                         </NavLink>
