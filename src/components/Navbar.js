@@ -8,7 +8,7 @@ const Navbar = ({ children }) => {
                 <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content flex flex-col">
                     <div class="w-full navbar bg-base-200 lg:px-16 sm:px-10">
-                        <NavLink to={'/home'}>
+                        <NavLink to={'/'}>
                             <img className='w-1/6' src="https://i.ibb.co/ZgyFj5s/logo.png" alt="logo" />
                         </NavLink>
                         <div class="flex-none lg:hidden">
