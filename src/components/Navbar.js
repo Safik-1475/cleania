@@ -23,6 +23,13 @@ const Navbar = ({ children }) => {
                                 <li><NavLink className='rounded-lg mx-1' to={'/services'}>Services</NavLink></li>
                                 <li><NavLink className='rounded-lg mx-1' to={'/contact'}>Contact</NavLink></li>
                                 <li><NavLink className='rounded-lg mx-1' to={'/login'}>Login</NavLink></li>
+                                <div class="dropdown dropdown-end">
+                                    <label tabindex="0" class="btn btn-primary btn-outline rounded-btn">BOOK NOW</label>
+                                    <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-200 rounded-box w-52 mt-4">
+                                        <li><a>Item 1</a></li>
+                                        <li><a>Item 2</a></li>
+                                    </ul>
+                                </div>
                             </ul>
                         </div>
                     </div>
