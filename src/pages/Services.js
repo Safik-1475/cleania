@@ -2,7 +2,19 @@ import React from 'react';
 
 const Services = () => {
     return (
-        <div>
+        <div className='bg-accent min-h-full'>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
+            <h2>This is Services</h2>
             <h2>This is Services</h2>
         </div>
     );

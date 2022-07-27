@@ -4,6 +4,8 @@ import { publicRoute } from './routes/PublicRoute';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { privateRoutes } from './routes/PrivateRoutes';
+import RequireAuth from "./authentication/RequireAuth";
 
 function App() {
   useEffect(() => {
@@ -16,6 +18,12 @@ function App() {
           {
             publicRoute.map(route => <Route path={route.path} element={<route.Component />} />)
           }
+          <Route element={<RequireAuth />}>
+            {
+              privateRoutes.map(({ path, Component }, index) => (
+                <Route key={index} path={path} element={<Component />} />))
+            }
+          </Route>
         </Routes>
       </Navbar>
     </>
