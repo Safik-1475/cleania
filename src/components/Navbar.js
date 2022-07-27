@@ -27,8 +27,9 @@ const Navbar = ({ children }) => {
                                 <div class="dropdown dropdown-end">
                                     <label tabindex="0" class="btn btn-primary btn-outline rounded-btn">BOOK NOW</label>
                                     <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-200 rounded-box w-52 mt-4">
-                                        <li><a>Item 1</a></li>
-                                        <li><a>Item 2</a></li>
+                                        <li><NavLink to={'/inventory'}>Inventory</NavLink></li>
+                                        <li><NavLink to={'/yourOrder'}>Your Order</NavLink></li>
+                                        <li><NavLink to={'/previewItems'}>Preview Items</NavLink></li>
                                     </ul>
                                 </div>
                                 <button className='ml-2'>
@@ -52,6 +53,17 @@ const Navbar = ({ children }) => {
                         <li><NavLink to={'/services'}>Services</NavLink></li>
                         <li><NavLink to={'/contact'}>Contact</NavLink></li>
                         <li><NavLink to={'/login'}>Login</NavLink></li>
+                        {/* MOBILE DROPDOWN MENU  HERE */}
+                        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-2">
+                            <div class="collapse-title text-md font-medium">
+                                BOOK NOW
+                            </div>
+                            <div class="collapse-content">
+                                <li><NavLink to={'/inventory'}>Inventory</NavLink></li>
+                                <li><NavLink to={'/yourOrder'}>Your Order</NavLink></li>
+                                <li><NavLink to={'/previewItems'}>Preview Items</NavLink></li>
+                            </div>
+                        </div>
                     </ul>
 
                 </div>
