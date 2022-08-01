@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Admin from '../hooks/Admin';
 
 const Navbar = ({ children }) => {
-    const [dark, setDark] = useState(false)
+    const [dark, setDark] = useState(false);
+    const [admin] = Admin();
     return (
         <>
             <div class="drawer drawer-end" data-theme={dark ? "dark" : "light"}>
@@ -19,11 +21,26 @@ const Navbar = ({ children }) => {
                         </div>
                         <div class="flex-none hidden lg:block">
                             <ul class="menu menu-horizontal">
-                                <li><NavLink className='rounded-lg mx-1' to={'/'}>Home</NavLink></li>
-                                <li><NavLink className='rounded-lg mx-1' to={'/about'}>About</NavLink></li>
-                                <li><NavLink className='rounded-lg mx-1' to={'/services'}>Services</NavLink></li>
-                                <li><NavLink className='rounded-lg mx-1' to={'/contact'}>Contact</NavLink></li>
-                                <li><NavLink className='rounded-lg mx-1' to={'/login'}>Login</NavLink></li>
+                                <li>
+                                    <NavLink className='rounded-lg mx-1' to={'/'}>Home</NavLink>
+                                </li>
+                                {admin &&
+                                    (<li>
+                                        <NavLink className='rounded-lg mx-1' to={'/dashboard'}>Dashboard</NavLink>
+                                    </li>)
+                                }
+                                <li>
+                                    <NavLink className='rounded-lg mx-1' to={'/about'}>About</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='rounded-lg mx-1' to={'/services'}>Services</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='rounded-lg mx-1' to={'/contact'}>Contact</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='rounded-lg mx-1' to={'/login'}>Login</NavLink>
+                                </li>
                                 <div class="dropdown dropdown-end">
                                     <label tabindex="0" class="btn btn-primary btn-outline rounded-btn">BOOK NOW</label>
                                     <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-200 rounded-box w-52 mt-4">
