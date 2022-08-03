@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Admin = () => {
-    const [admin, setAdmin] = useState(false);
+    const [admin, setAdmin] = useState(true);
     return [admin]
 };
 

@@ -1,22 +1,12 @@
 import React from 'react';
+import DashboardSidebar from '../../components/DashboardSidebar';
+import { Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <div className='bg-accent h-full'>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-            <h1>This is Dashboard</h1>
-        </div>
+        <DashboardSidebar>
+            <Outlet />
+        </DashboardSidebar>
     );
 };
 
